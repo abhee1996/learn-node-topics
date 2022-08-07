@@ -1,0 +1,162 @@
+Update package.json file 
+add this code in script tags
+
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+!Remember: add node and index.js file withe xact directory
+
+
+//// // // // // // // // // // // // // //
+//Open git Bash and follow these commands//
+// // // // // // // // // // // // // ////
+
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git init
+Reinitialized existing Git repository in F:/node cource/node practice/ExpressJs/6.ExpressJsWebApp/.git/
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git add .
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   package.json
+
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git commit -m "adding scripts for heroku"
+[master 3973cef] adding scripts for heroku
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git push
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 709 bytes | 236.00 KiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/abhee1996/NodeJs-ExpressJs-WebApp.git
+   92b1c6f..3973cef  master -> master
+
+
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ heroku login
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/31054bb2-c325-4277-835b-52a0ea188a08?requestor=SFMyNTY.g2gDbQAAAA8xODIuMTc5LjE2Ni4yMTduBgAoYbpDgQFiAAFRgA.1PWPm0sI7hIBOVeomuJqrAGS_O4-MhVOIjY5LxlOtvQ
+heroku: Waiting for login...
+Logging in... done
+Logged in as masq308@gmail.com
+ ^CTerminate batch job (Y/N)? n
+n
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ heroku keys:add
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+Found an SSH public key at C:\Users\Muhammad Abdullah\.ssh\id_rsa.pub
+Would you like to upload it to Heroku? [Y/n]: y
+Uploading C:\Users\Muhammad Abdullah\.ssh\id_rsa.pub SSH key... done
+ ^CTerminate batch job (Y/N)? y
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git remote
+origin
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ heroku create nodejs-expressjs-webapp
+ »   Warning: heroku update available from 7.53.0 to 7.60.2.
+Creating nodejs-expressjs-webapp... done
+https://nodejs-expressjs-webapp.herokuapp.com/ | https://git.heroku.com/nodejs-expressjs-webapp.git
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git remote
+heroku
+origin
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git push heroku master
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (34/34), 20.16 KiB | 1.19 MiB/s, done.
+Total 34 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Building on the Heroku-20 stack
+remote: -----> Determining which buildpack to use for this app
+remote: -----> Node.js app detected
+remote:
+remote: -----> Creating runtime environment
+remote:
+remote:        NPM_CONFIG_LOGLEVEL=error
+remote:        NODE_VERBOSE=false
+remote:        NODE_ENV=production
+remote:        NODE_MODULES_CACHE=true
+remote:
+remote: -----> Installing binaries
+remote:        engines.node (package.json):  unspecified
+remote:        engines.npm (package.json):   unspecified (use default)
+remote:
+remote:        Resolving node version 16.x...
+remote:        Downloading and installing node 16.15.1...
+remote:        Using default npm version: 8.11.0
+remote:
+remote: -----> Installing dependencies
+remote:        Installing node modules
+remote:
+remote:        added 78 packages, and audited 79 packages in 5s
+remote:
+remote:        7 packages are looking for funding
+remote:          run `npm fund` for details
+remote:
+remote:        found 0 vulnerabilities
+remote:
+remote: -----> Build
+remote:
+remote: -----> Caching build
+remote:        - npm cache
+remote:
+remote: -----> Pruning devDependencies
+remote:
+remote:        up to date, audited 79 packages in 2s
+remote:
+remote:        7 packages are looking for funding
+remote:          run `npm fund` for details
+remote:
+remote:        found 0 vulnerabilities
+remote:
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 33.9M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://nodejs-expressjs-webapp.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/nodejs-expressjs-webapp.git
+ * [new branch]      master -> master
+
+
+
+//// // // // // // // // // // // // // // ///
+//DONE YOUR NODE PROJECT DEPLOYED ON HEROKU  //
+// // // // // // // // // // // // // //// ///

@@ -1,0 +1,158 @@
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp
+$ git init
+Initialized empty Git repository in F:/node cource/node practice/ExpressJs/6.ExpressJsWebApp/.git/
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        3.tamplate Engine.txt
+        node_modules/
+        package-lock.json
+        package.json
+        public/
+        src/
+        tamplates/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        3.tamplate Engine.txt
+        package-lock.json
+        package.json
+        public/
+        src/
+        tamplates/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git add .
+warning: LF will be replaced by CRLF in package-lock.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git commit -m "my first nodejs expressjs app"
+[master (root-commit) 92b1c6f] my first nodejs expressjs app
+ 18 files changed, 1352 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 3.tamplate Engine.txt
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 public/css/style.css
+ create mode 100644 public/js/main.js
+ create mode 100644 src/index.js
+ create mode 100644 src/routing/routing.js
+ create mode 100644 src/routing/routing.txt
+ create mode 100644 tamplates/partials/footer.hbs
+ create mode 100644 tamplates/partials/headMetas.hbs
+ create mode 100644 tamplates/partials/headers.hbs
+ create mode 100644 tamplates/views/404.hbs
+ create mode 100644 tamplates/views/about.hbs
+ create mode 100644 tamplates/views/blog.hbs
+ create mode 100644 tamplates/views/contact.hbs
+ create mode 100644 tamplates/views/index.hbs
+ create mode 100644 tamplates/views/weather.hbs
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git remote
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git branch
+* master
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ^C
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ls ~/.ssh
+id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ssh-keygen -t rsa -b 4096 -C "masq308@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Muhammad Abdullah/.ssh/id_rsa):
+/c/Users/Muhammad Abdullah/.ssh/id_rsa already exists.
+Overwrite (y/n)?
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ls ~/.ssh
+id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ eval $(ssh-agent -s)
+Agent pid 1251
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Muhammad Abdullah/.ssh/id_rsa (masq308@gmail.com)
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ls ~/.ssh
+id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9gqCNvqTB6TlSmK2sXCnmCWODbw75AOkK52ZFhUDAkheXQKRWrRykQiJFQbyHSzkvvPlHwO7itLPkrMHbAeQ8vq/NOzGVJrKmcZppTaWCQmSx3utQjC3+LGrKx8r9yQAq5wa+1cCxDT/SwX3aEpQUDFXjB+fTGZCijDh/W6hFLSz2OrXsr8CxxWGRVTaePKE4E687uwk/SjCBPwV0Kj/2IiYsavPXZRdmT6R3ikUKud6X/yUEDU2KMWKz92QiU6DXlyPIoyEKbpp9VfXPPH/me+ktlXG/8rMnms5FjBS1Ixo+WenAtErWrok/sy+V2CWCF0ZATv3cnkZXtsGK2BifLzyViF/ERPpVDbDQMtH19pmtLHk3Az5gwb6giEQSRjtxlVXV8+31IbXShFtMYPUQiOguHkuJY7/tDj1pPXF/r44pQLBBWPKRFOnqHpEuZQIei5HwAlk5nEuzUOSIausx8KTOOlICGU2TgDtw6Zz9boTxe2qJvHuQYzkUlQNyeTNT4YYP+Y4aepx7g5Sh+5dWzTvllYujYBSzmd0BF5Em4u5TBCA9+2X+ONhTwmImYBRrRwuT5DpKr6uJoLeBPUCJeH5e2nLjCWqBb9USQr9CYRBCaiTaW9V1ZJOzVIuBl0N6tNEtMj9E527NBZT6xm+ZroSK4ThhJsldIq6X6jWd+Q== masq308@gmail.com
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ^C
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ ssh -T git@github.com
+Hi abhee1996! You've successfully authenticated, but GitHub does not provide shell access.
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git romote
+git: 'romote' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git remote
+origin
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git branch
+* master
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$ git push -u origin master
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (27/27), 19.29 KiB | 1.75 MiB/s, done.
+Total 27 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/abhee1996/NodeJs-ExpressJs-WebApp.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /f/node cource/node practice/ExpressJs/6.ExpressJsWebApp (master)
+$

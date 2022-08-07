@@ -1,0 +1,42 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "node_js_app",
+    "port":"3307",
+    
+      "host": "localhost",
+    "dialect": "mysql",
+    "define": {
+      "timestamps": false
+    },
+    "AllowPublicKeyRetrieval":"true",
+    "operatorsAliases":"false",
+    "pool":{
+      "max":5,
+      "min":0,
+      "acquire":30000,
+      "idle":10000
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "node_js_app",
+    "port":"3307",
+    "host": "localhost",
+    "dialect": "mysql",
+    "AllowPublicKeyRetrieval":"true"
+
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "node_js_app",
+    "port":"3307",
+    "host": "localhost",
+    "dialect": "mysql",
+    "AllowPublicKeyRetrieval":"true"
+
+  }
+}

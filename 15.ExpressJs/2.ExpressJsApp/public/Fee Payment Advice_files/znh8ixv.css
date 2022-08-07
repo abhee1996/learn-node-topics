@@ -1,0 +1,45 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * halyard-display:
+ *   - http://typekit.com/eulas/00000000000000007735adb1
+ *   - http://typekit.com/eulas/00000000000000007735adc6
+ * halyard-text:
+ *   - http://typekit.com/eulas/00000000000000007735adc2
+ *   - http://typekit.com/eulas/00000000000000007735add1
+ *
+ * © 2009-2022 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2022-03-10 11:53:58 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=znh8ixv&ht=tk&f=34661.34668.34695.34700&a=52793681&app=typekit&e=css");
+
+@font-face {
+font-family:"halyard-display";
+src:url("https://use.typekit.net/af/272149/00000000000000007735adb1/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/272149/00000000000000007735adb1/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/272149/00000000000000007735adb1/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;
+}
+
+@font-face {
+font-family:"halyard-display";
+src:url("https://use.typekit.net/af/6780d0/00000000000000007735adc6/30/l?subset_id=2&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/6780d0/00000000000000007735adc6/30/d?subset_id=2&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/6780d0/00000000000000007735adc6/30/a?subset_id=2&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"halyard-text";
+src:url("https://use.typekit.net/af/a7393c/00000000000000007735adc2/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/a7393c/00000000000000007735adc2/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/a7393c/00000000000000007735adc2/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"halyard-text";
+src:url("https://use.typekit.net/af/2ed20c/00000000000000007735add1/30/l?subset_id=2&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/2ed20c/00000000000000007735add1/30/d?subset_id=2&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/2ed20c/00000000000000007735add1/30/a?subset_id=2&fvd=n6&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+.tk-halyard-display { font-family: "halyard-display",sans-serif; }
+.tk-halyard-text { font-family: "halyard-text",sans-serif; }

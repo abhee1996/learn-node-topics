@@ -1,0 +1,51 @@
+.cd-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 2em auto
+}
+
+    .cd-container::after {
+        content: '';
+        display: table;
+        clear: both
+    }
+
+.cd-top {
+    position: relative;
+    left: 9%;
+    top: -80px;
+    color: #00e4c4 !important;
+    font-size: 24px;
+    -webkit-transition: opacity .3s 0s,visibility 0s .3s;
+    -moz-transition: opacity .3s 0s,visibility 0s .3s;
+    transition: opacity .3s 0s,visibility 0s .3s
+}
+
+    .cd-top.cd-is-visible {
+        visibility: visible;
+        opacity: 1;
+        z-index: 100
+    }
+
+@media only screen and (max-width:990px) {
+    .cd-top {
+        left: -17%;
+        top: -85px
+    }
+}
+
+@media(max-width:460px) {
+    .cd-top {
+        left: 45%;
+        top: -120px
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .cd-top {
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px
+    }
+}

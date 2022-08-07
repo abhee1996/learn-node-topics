@@ -1,0 +1,34 @@
+
+//  // // // // // // /// // //////
+//                               //
+//           Express-js          //
+//           ==========          //
+//                               //
+// // // // // // // // // // // //
+app.get(route,function callback(req,res){
+
+})
+
+app.get() method have two parameters :
+ ->one is route ,which serves the routing
+-> 2nd is callback
+
+  callback function have two parameters request()
+  request() represents http request
+  response() represents http response that the express app send when it recievea an http request
+  for listen to you browser
+
+  //Routing
+app.get("/about", (req, res) => {
+  res.send("This is about of Express - Js");
+});
+app.get("/contact", (req, res) => {
+  //send html data
+  res.send("<h1>contact us for Express - Js</h1>");
+});
+app.listen(port,"127.0.0.1")
+
+difference between res.send() and res.json()
+
+res.send() and res.json() both are identical when an object and array is passed
+res.json() will also convert non-objects like "null" and "undefined",which are not valid json.

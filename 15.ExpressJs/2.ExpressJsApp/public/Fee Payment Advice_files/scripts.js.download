@@ -1,0 +1,169 @@
+//function buttonUp() { var e = $(".search .searchInputContainer input").val(); e = $.trim(e).length, 0 !== e ? ($(".search-toggle-icon").css("display", "none"), $(".search").css("overflow", "visible")) : ($(".search .searchInputContainer input").val(""), $(".search-toggle-icon").css("display", "block"), $(".search").css("overflow", "hidden")), $(".search .searchInputContainer a.dnnSearchBoxClearText").click(function () { $(".search .searchInputContainer a.dnnSearchBoxClearText").hasClass("dnnShow") ? $(this).css("overflow", "visible") : $(".search").css("overflow", "hidden") }) } $(document).ready(function () { $(".navbar-nav.sm-collapsible .caret").click(function (e) { e.preventDefault() }), $('[data-toggle="tooltip"]').length && $('[data-toggle="tooltip"]').tooltip(), $('<span class="search-toggle-icon"></span>').insertAfter(".search a.SearchButton"); var e = $(".search"), c = $(".search-toggle-icon"), n = $(".search .searchInputContainer input"), a = !1; c.click(function () { 0 == a ? (e.addClass("search-open"), n.focus(), a = !0) : (e.removeClass("search-open"), n.focusout(), a = !1) }), c.mouseup(function () { return !1 }), e.mouseup(function () { return !1 }), $(document).mouseup(function () { 1 == a && ($(".search-toggle-icon").css("display", "block"), c.click()) }), n.keyup(buttonUp), $("a#search-action").click(function () { $("#search-top").toggleClass("active") }) });
+
+/*added to fix navbar on scroll*/
+$(window).scroll(function () {
+    var sticky = $('.sticky'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 100) sticky.addClass('fixed');
+    else sticky.removeClass('fixed');
+
+});
+
+$(window).load(function () {
+    //var x = $(".language-object a");
+    //x.style.display = "none";
+   // debugger;
+    //$('.language-object a:first-child').css('display', 'none');
+    var lang = getCookie('language');
+   // alert(lang);
+});
+
+// style switcher for Accessibility
+$(document).ready(function () {
+
+    
+
+   // initStyle();
+    //$("#Contrast span a").click(function () {
+    //    itemId = $(this).attr("id");
+    //    console.log(itemId);
+    //    setActiveStyleSheet(itemId);
+    //});
+});
+
+function setActiveStyleSheet(styleSheet) {
+    var i, a;
+    for (i = 0; (a = document.getElementsByTagName("link")[i]) ; i++) {
+        if (a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
+            a.disabled = true;
+            if (a.getAttribute("title") === styleSheet) a.disabled = false;
+        }
+        //setCookie("style_colour", styleSheet, 365);
+    }
+    style = styleSheet;
+}
+
+function setCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    }
+    else expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function initStyle() {
+    if (getCookie('style_colour')) {
+        style = getCookie('style_colour');
+        setActiveStyleSheet(style);
+    }
+    else {
+        style = "NormalContrast";
+        //setCookie("style_colour", style, 365);
+        setActiveStyleSheet(style);
+    }
+    return style;
+}
+
+//function getCookie(name) {
+//    var nameEQ = name + "=";
+//    var ca = document.cookie.split(';');
+//    for (var i = 0; i < ca.length; i++) {
+//        var c = ca[i];
+//        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+//        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+//    }
+//    return false; //old value returned was null
+//}
+
+function getCookie(name) {
+    //debugger;
+    // Split cookie string and get all individual name=value pairs in an array
+    var cookieArr = document.cookie.split(";");
+
+    // Loop through the array elements
+    for (var i = 0; i < cookieArr.length; i++) {
+        var cookiePair = cookieArr[i].split("=");
+
+        /* Removing whitespace at the beginning of the cookie name
+        and compare it with the given string */
+        if (name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+        }
+    }
+
+    // Return null if not found
+    return null;
+}
+
+// scale for Accessibility text
+$(document).ready(function () {
+    // $("#AccessOptionsHover").mouseenter(function () {
+        // $("#AccessOptions").removeClass("hidden_pane");
+    // });
+
+    // $("#AccessOptionsHover").mouseleave(function () {
+        // $("#AccessOptions").addClass("hidden_pane");
+    // });
+	
+	$("#AccessOptionsHover").click(function() {
+		$("#AccessOptions").toggleClass("hidden_pane");
+	});
+
+    $('#SmallText').click(function () {
+        location.reload();
+    });
+
+    $('#LargeText').click(function () {
+        $('#Body').scale(1.5);
+    });
+
+});
+
+$.fn.scale = function (x) {
+    if (!$(this).filter(':visible').length) return $(this);
+    if (!$(this).parent().hasClass('scaleContainer'))
+        $(this).wrap($('<div class="scaleContainer">').css('position', 'relative'));
+    var rect = $(this).css({
+        'transform': 'scale(' + x + ')',
+        '-ms-transform': 'scale(' + x + ')',
+        '-moz-transform': 'scale(' + x + ')',
+        '-webkit-transform': 'scale(' + x + ')',
+        'transform-origin': 'left bottom',
+        '-ms-transform-origin': 'left bottom',
+        '-moz-transform-origin': 'left bottom',
+        '-webkit-transform-origin': 'left bottom',
+        'position': 'absolute',
+        'bottom': '0',
+        'left': '4%',
+    }).get(0).getBoundingClientRect();
+    if (x == 1) {
+        $(this).unwrap();
+        $(this).css('position', 'initial');
+    }
+    else
+        $(this).parent().width(rect.width).height(rect.height);
+    return $(this);
+};
+
+
+function setStaticLabels(language) {
+	//debugger;
+    var lblFollow = document.getElementById("lblFollow");
+    var lblMoreNews = document.getElementById("lblMoreNews");
+    var lblMoreEvents = document.getElementById("lblMoreEvents");
+    //Check language and translate labels accordingly. 
+    if (language == "ga-IE") {
+        lblFollow.innerHTML = "Lean ATU Dún na nGall";
+        lblMoreNews.innerHTML = "Tuilleadh Sc&eacute;ala Dún na nGall ATU "
+        lblMoreEvents.innerHTML = "Tuilleadh &Oacute;c&aacuteid&iacute; Dún na nGall ATU";
+    } else {
+        lblFollow.innerHTML = "Follow ATU Donegal";
+        lblMoreNews.innerHTML = "More Donegal ATU News";
+        lblMoreEvents.innerHTML = "More Donegal ATU Events";
+    }
+}
+

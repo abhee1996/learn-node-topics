@@ -1,0 +1,31 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "no_dejs_app",
+      "host": "localhost",
+      "port":"3307",
+    "dialect": "mariadb",
+    "allowPublicKeyRetrieval":true,
+    "cachingRsaPublicKey":true
+  
+  },
+  "test": {
+    "username": "root",
+    "password": "root",
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mariadb",
+    "allowPublicKeyRetrieval":true
+
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "no_dejs_app",
+    "host": "127.0.0.1",
+    "dialect": "mariadb",
+    "allowPublicKeyRetrieval":true
+
+  }
+}

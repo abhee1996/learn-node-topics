@@ -1,0 +1,38 @@
+
+//  // // // // // // /// // //////
+//                               //
+//        NPM In Node-js         //
+//      ==================       //
+//                               //
+// // // // // // // // // // // //
+1.creat index.js file in current folder.
+2.open terminal in current directory
+3.run following command:
+    ->npm init
+4.it ask package name("you project name"),version,discription(write our own discription ),entry point,test command,git repository,keyworks,author(e.g: Your name),lisence, and that it.
+(In all these steps press enter to move next step and in last it ask ok )
+5. you will see, package.json file created in current folder have info about current project details, like this:
+
+{
+  "name": "learnnpm",
+  "version": "1.0.0",
+  "description": "\"Learn mpm package manager how its work for\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "\"Muhammad ABdullah\"",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
+6. if you want to install npm package , just do npm install *"package-name"*
+and installed packages reflect inside dependencies object 
+"dependencies": {
+    "chalk": "^5.0.1",
+    "validator": "^13.7.0"
+  }
+
+
+

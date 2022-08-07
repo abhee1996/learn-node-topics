@@ -1,0 +1,19 @@
+//we use tamplate Engine to use show dynamic content in out website
+//template engine is also known as views Engine
+//To set the views Engine we have to tell the app what views engine im using
+
+app.set("view engine", "hbs");
+
+to use tamplate engine and render tamplate files
+set the following application setting properties, set in app.js in the default app created by the generator:
+we have to create a views directory its by default, otherwise it would not be used.
+-> views, the directory where the template files are located. Eg: app.set('views', './views'). This defaults to the views directory in the application root directory.
+-> view engine, the template engine to use. For example, to use the Pug template engine: app.set('view engine', 'pug').
+Views: A directory or an array of directories for the application's views. If an array, the views are looked up in the order they occur in the array.
+
+//const viewsPath = path.join(__dirname, "../views");
+// app.set("views",viewsPath)
+//-> to change the directory name only way it set that directory path as view
+const tamplatesPath = path.join(__dirname, "../tamplates");
+
+app.set("views",tamplatesPath)

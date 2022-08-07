@@ -1,0 +1,29 @@
+install heroku-cli 64x in your system
+after installation
+
+open gitbash as admin and run following commands...
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /
+$ heroku -v
+ »   Warning: Our terms of service have changed:
+ »   https://dashboard.heroku.com/terms-of-service
+heroku/7.53.0 win32-x64 node-v12.21.0
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /
+$ ^C
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /
+$ heroku -v
+heroku/7.53.0 win32-x64 node-v12.21.0
+
+Muhammad Abdullah@Sikandar-HP MINGW64 /
+$ ls -al ~/.ssh
+total 33
+drwxr-xr-x 1 Muhammad Abdullah 197121    0 Jun  8 18:29 ./
+drwxr-xr-x 1 Muhammad Abdullah 197121    0 Jun  8 18:49 ../
+-rw-r--r-- 1 Muhammad Abdullah 197121 3381 Jun  8 17:56 id_rsa
+-rw-r--r-- 1 Muhammad Abdullah 197121  743 Jun  8 17:56 id_rsa.pub
+-rw-r--r-- 1 Muhammad Abdullah 197121  847 Jun  8 18:40 known_hosts
+-rw-r--r-- 1 Muhammad Abdullah 197121  187 Jun  8 18:19 known_hosts.old
+
+

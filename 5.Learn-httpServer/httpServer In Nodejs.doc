@@ -1,0 +1,21 @@
+
+
+//  // // // // // // /// // //////
+//                               //
+//      Node-js HttpServer       //
+//      ==================       //
+//                               //
+// // // // // // // // // // // //
+Create http server on nodejs
+1.Import module "http" from node-js
+const http = require("http");
+
+-> http.CreateServer() is a method which is used to get information about the request(e.g url,request headers,data).
+-> response is used to return the response as parameter for a current request.
+
+
+
+
+
+
+

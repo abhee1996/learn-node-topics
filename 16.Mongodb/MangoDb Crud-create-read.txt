@@ -1,0 +1,290 @@
+Microsoft Windows [Version 10.0.19043.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Muhammad Abdullah>mongo --version
+MongoDB shell version v5.0.9
+Build Info: {
+    "version": "5.0.9",
+    "gitVersion": "6f7dae919422dcd7f4892c10ff20cdc721ad00e6",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}
+
+C:\Users\Muhammad Abdullah>mongod --version
+db version v5.0.9
+Build Info: {
+    "version": "5.0.9",
+    "gitVersion": "6f7dae919422dcd7f4892c10ff20cdc721ad00e6",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}
+
+C:\Users\Muhammad Abdullah>mongo
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("6f3ac4f6-52c7-4206-9ab1-6717dcb5a30f") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-06-09T12:01:34.548+05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> shoe dbs
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:5
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use abdullahdb
+switched to db abdullahdb
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db.abdullahData.insertOne({name:"muhammad abdullah",age:25,city:"Lahore",profession:"software developer",active:true,alive:true})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("62a1a7b8d2c83d92f46ab974")
+}
+> show dbs
+abdullahdb  0.000GB
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+> db
+abdullahdb
+> show collections
+abdullahData
+> db.abdullahdb.find()
+> db.abdullahdb.find();
+> show collections
+abdullahData
+> db.abdullahData.find();
+{ "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"), "name" : "muhammad abdullah", "age" : 25, "city" : "Lahore", "profession" : "software developer", "active" : true, "alive" : true }
+> db.abdullahData.find().preety()
+uncaught exception: TypeError: db.abdullahData.find(...).preety is not a function :
+@(shell):1:1
+> db.abdullahData.find().pretty()
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+
+> quit()
+
+C:\Users\Muhammad Abdullah>mongo
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("e6c5ff54-cdd1-47ea-8e36-cd01faa880c7") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-06-09T12:01:34.548+05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+abdullahdb  0.000GB
+admin       0.000GB
+config      0.000GB
+local       0.000GB
+> use abdullahdb
+switched to db abdullahdb
+> db.collection.find()
+> db.abdullahData.find()
+{ "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"), "name" : "muhammad abdullah", "age" : 25, "city" : "Lahore", "profession" : "software developer", "active" : true, "alive" : true }
+> db.abdullahData.find().pretty()
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+
+
+> db.abdullahData.insertMany([{name:"Usman",age:25,city:"Gwjrawala",profession:"software developer",active:true,alive:true},{name:"Ahsan",age:24,city:"Lahore",profession:"JSP developer",active:true,alive:true},{name:"Awais Ahmed",age:35,city:"Oman",profession:"Software QA",active:true,alive:true},{name:"Amir Hameed",age:34,city:"Lahore",profession:"Front endReactJs Engineer",active:true,alive:true}]);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62a1add588efdcd4c6100e93"),
+                ObjectId("62a1add588efdcd4c6100e94"),
+                ObjectId("62a1add588efdcd4c6100e95"),
+                ObjectId("62a1add588efdcd4c6100e96")
+        ]
+}
+
+> db.abdullahData.find().pretty();
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e93"),
+        "name" : "Usman",
+        "age" : 25,
+        "city" : "Gwjrawala",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e94"),
+        "name" : "Ahsan",
+        "age" : 24,
+        "city" : "Lahore",
+        "profession" : "JSP developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e95"),
+        "name" : "Awais Ahmed",
+        "age" : 35,
+        "city" : "Oman",
+        "profession" : "Software QA",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e96"),
+        "name" : "Amir Hameed",
+        "age" : 34,
+        "city" : "Lahore",
+        "profession" : "Front endReactJs Engineer",
+        "active" : true,
+        "alive" : true
+}
+> db.abdullahData.find({name:"Usman"})
+{ "_id" : ObjectId("62a1add588efdcd4c6100e93"), "name" : "Usman", "age" : 25, "city" : "Gwjrawala", "profession" : "software developer", "active" : true, "alive" : true }
+> db.abdullahData.find({name:"Usman"}).pretty()
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e93"),
+        "name" : "Usman",
+        "age" : 25,
+        "city" : "Gwjrawala",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+> db.abdullahData,find({name:"Usman",{name:1}});
+
+> db.abdullahData.find({name:"Usman"},{name:1}).pretty();
+{ "_id" : ObjectId("62a1add588efdcd4c6100e93"), "name" : "Usman" }
+> db.abdullahData.find({name:"Usman"},{_id:0,name:1}).pretty();
+{ "name" : "Usman" }
+> db.abdullahData.find({alive:true}).pretty();
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e93"),
+        "name" : "Usman",
+        "age" : 25,
+        "city" : "Gwjrawala",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e94"),
+        "name" : "Ahsan",
+        "age" : 24,
+        "city" : "Lahore",
+        "profession" : "JSP developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e95"),
+        "name" : "Awais Ahmed",
+        "age" : 35,
+        "city" : "Oman",
+        "profession" : "Software QA",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e96"),
+        "name" : "Amir Hameed",
+        "age" : 34,
+        "city" : "Lahore",
+        "profession" : "Front endReactJs Engineer",
+        "active" : true,
+        "alive" : true
+}
+> db.abdullahData.find({alive:true}).limit(1).pretty();
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+> db.abdullahData.findOne({alive:true})
+
+> 

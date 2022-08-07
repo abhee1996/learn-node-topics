@@ -1,0 +1,10 @@
+this is my new read read.txt file
+ add new text in read.txt file
+ buffer mainly used to store binary data while reading from a file or receiving packets over the network.
+It's an additional data type called buffer(not available in browser's javascript)
+
+ buffer mainly used to store binary data while reading from a file or receiving packets over the network.
+It's an additional data type called buffer(not available in browser's javascript)
+
+ buffer mainly used to store binary data while reading from a file or receiving packets over the network.
+It's an additional data type called buffer(not available in browser's javascript)

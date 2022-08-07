@@ -1,0 +1,18 @@
+//  // // // // // // /// // //////
+//                               //
+//      Node-js Programming      //
+//      ===================      //
+//                               //
+// // // // // // // // // // // //
+
+NodeJs: Node js is pure javascript runtime,built on the V8 JavaScript Engine and C++
+created by google engineer in 2009.
+Concept: its concept is to make single programming language for frontend and backend
+Depend:  its is created on C++ and V8 javascript complier engine by Google.(V8-Engine is a javascript compiler which compine/convert javascript code into binary language(0,1)... )
+
+
+
+how to run node.js on runtime, so on save it execute code its self.
+NODEMON
+just install nodemon liberary 
+npm i nodemon

@@ -1,0 +1,37 @@
+//animate mobile hamburger icon
+(function () {
+    "use strict";
+    var toggles = document.querySelectorAll(".c-hamburger--htx");
+    for (var i = toggles.length - 1; i >= 0; i--) {
+        var toggle = toggles[i];
+        toggleHandler(toggle);
+    };
+    function toggleHandler(toggle) {
+        toggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+        });
+    }
+})();
+
+//replace default navbar arrows with font awesome icons for desktop screens only
+$(window).resize(function () {
+    console.log('resize called');
+    var width = $(window).width();
+    if (width >= 1024) {
+        $('#navbarTop .caret').removeClass('caret').addClass('fa fa-angle-down');
+    }
+    else {
+        $('#navbarTop .caret').removeClass('caret').addClass('fa fa-angle-down');
+    }
+})
+.resize();//trigger the resize event on page load.
+
+//add BS css class to default style all tables
+$("div table").addClass('table table-striped');
+
+//add class to parent li when submenu is active
+$(document).ready(function () {
+    $('ul li.active').parentsUntil().closest('li').addClass('open');
+});
+

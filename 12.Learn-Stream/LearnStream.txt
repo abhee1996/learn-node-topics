@@ -1,0 +1,47 @@
+//  // // // // // // /// // //////
+//                               //
+//      Node-js Learn Stream     //
+//      ====================     //
+//                               //
+// // // // // // // // // // // //
+source youtube video:https://youtu.be/ev5pgydOhT8
+
+Sream : read and write data from a source or destination in a continous fashion.
+Streaming means "listening to music" and "watching youtube videos" in real time, instead of first download it then watch it.
+Streaming: its process is downloading data in the form of chunks or small packets and show it..
+Each type of stream is an EventsEmitter instance and throw single or multiple events at different intance of time.
+these events are fired:
+data-> when data available to read.
+end-> when data not available to read.
+error-> when there is any error in recieving and writing data.
+finish-> when all the data is finished or flushed to underlying thread or system
+
+
+  There are 2 ways to stream data
+  first way:
+  ->Reading from the stream
+  -> create a readable stream
+  -> Handle stream events -> (data,end,error,finish)
+
+
+  Code:
+  const rStream = fs.createReadStream("LearnStream.txt");
+
+  rStream.on("data", (chunkbychunkData) => {
+    res.write(chunkbychunkData);
+  });
+  rStream.on("end", () => {
+    res.end();
+  });
+  rStream.on("error", (err) => {
+    console.log("err", err);
+    res.end("file not found");
+  });
+
+
+
+  second way:
+  we use single pipe() method for continous write and read the streaming of data
+  const rStream = fs.createReadStream("LearnStream.txt");
+
+  rStream.pipe(res);

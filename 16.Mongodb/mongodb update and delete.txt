@@ -1,0 +1,133 @@
+> Update document
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:7
+> db.abdullahData.updateOne({name:"Amir Hameed"},{$set:{profession:"Front End Engineer"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.abdullahData.findOne().pretty();
+uncaught exception: TypeError: db.abdullahData.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.abdullahData.find().pretty();
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e93"),
+        "name" : "Usman",
+        "age" : 25,
+        "city" : "Gwjrawala",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e94"),
+        "name" : "Ahsan",
+        "age" : 24,
+        "city" : "Lahore",
+        "profession" : "JSP developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e95"),
+        "name" : "Awais Ahmed",
+        "age" : 35,
+        "city" : "Oman",
+        "profession" : "Software QA",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e96"),
+        "name" : "Amir Hameed",
+        "age" : 34,
+        "city" : "Lahore",
+        "profession" : "Front End Engineer",
+        "active" : true,
+        "alive" : true
+}
+> db.abdullahData.updateMany({city:"Lahore"},{$set:{active:false}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+> db.abdullahData.find({active:false}).pretty()
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : false,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e94"),
+        "name" : "Ahsan",
+        "age" : 24,
+        "city" : "Lahore",
+        "profession" : "JSP developer",
+        "active" : false,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e96"),
+        "name" : "Amir Hameed",
+        "age" : 34,
+        "city" : "Lahore",
+        "profession" : "Front End Engineer",
+        "active" : false,
+        "alive" : true
+}
+> db.abdullahData.deleteMany({name:"Awais Ahmed"})
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+> db.abdullahData.find()
+{ "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"), "name" : "muhammad abdullah", "age" : 25, "city" : "Lahore", "profession" : "software developer", "active" : false, "alive" : true }
+{ "_id" : ObjectId("62a1add588efdcd4c6100e93"), "name" : "Usman", "age" : 25, "city" : "Gwjrawala", "profession" : "software developer", "active" : true, "alive" : true }
+{ "_id" : ObjectId("62a1add588efdcd4c6100e94"), "name" : "Ahsan", "age" : 24, "city" : "Lahore", "profession" : "JSP developer", "active" : false, "alive" : true }
+{ "_id" : ObjectId("62a1add588efdcd4c6100e96"), "name" : "Amir Hameed", "age" : 34, "city" : "Lahore", "profession" : "Front End Engineer", "active" : false, "alive" : true }
+> db.abdullahData.find().pretty()
+{
+        "_id" : ObjectId("62a1a7b8d2c83d92f46ab974"),
+        "name" : "muhammad abdullah",
+        "age" : 25,
+        "city" : "Lahore",
+        "profession" : "software developer",
+        "active" : false,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e93"),
+        "name" : "Usman",
+        "age" : 25,
+        "city" : "Gwjrawala",
+        "profession" : "software developer",
+        "active" : true,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e94"),
+        "name" : "Ahsan",
+        "age" : 24,
+        "city" : "Lahore",
+        "profession" : "JSP developer",
+        "active" : false,
+        "alive" : true
+}
+{
+        "_id" : ObjectId("62a1add588efdcd4c6100e96"),
+        "name" : "Amir Hameed",
+        "age" : 34,
+        "city" : "Lahore",
+        "profession" : "Front End Engineer",
+        "active" : false,
+        "alive" : true
+}
+> db.abdullahData.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 4 }
+> db.abdullahData.find().pretty()
+> db.abdullahData.find()
